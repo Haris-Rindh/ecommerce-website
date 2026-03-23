@@ -21,7 +21,7 @@ import plant from '../../assets/images/interior/plant.png'
 //=============================================================================                                             Tech folder         =============================================================================
 import CanonCameras from '../../assets/images/tech/Canon_camreras.png'
 import electricKettle from '../../assets/images/tech/electric_kattle.png'
-import goPro from '../../assets/images/tech/gopro.png'
+import gopro from '../../assets/images/tech/goPro.png'
 import whiteHeadphone from '../../assets/images/tech/Headphone_2.png'
 import GamingHeadphones from '../../assets/images/tech/Headphones.png'
 import laptops from '../../assets/images/tech/laptop.png'
@@ -65,7 +65,7 @@ import Shirt6 from '../../assets/images/shirts/s6.jpg'
 export {
     profilePic, cart_bg, bannerImage, GroupBg, MaskGroup, MaskGroup2, personBg, planeBg, techBg,
     softChair, lamp, dishes, pot, mixer, blender, appliance, plant,
-    CanonCameras, electricKettle, goPro, whiteHeadphone, GamingHeadphones, laptops, smartPhone, smartTablet, smartWatch, 
+    CanonCameras, electricKettle, gopro, whiteHeadphone, GamingHeadphones, laptops, smartPhone, smartTablet, smartWatch, 
     Bag, BrownJacket, Coat, JeansShort, Shirt, Wallet,
     AppStore, PlayStore, UAE, Australia, US, Russia, Italy, Denmark, France, Germany, China, Britain,
     Shirt1, Shirt2, Shirt3, Shirt4, Shirt5, Shirt6
