@@ -6,10 +6,10 @@ import { GlobalProvider } from "./context/GlobalState";
 import { ToastProvider } from "./context/ToastContext";
 
 // Layout Components
-import Header from "./components/layout/Header";
-import Navbar from "./components/layout/Navbar";
-import Newsletter from "./components/layout/Newsletter";
-import Footer from "./components/layout/Footer";
+import Header from "./components/layout/header";
+import Navbar from "./components/layout/navbar";
+import Newsletter from "./components/layout/newsletter";
+import Footer from "./components/layout/footer";
 
 // Security Routes
 import { ProtectedRoute, AdminRoute } from "./routes/ProtectedRoute";
