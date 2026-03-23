@@ -54,10 +54,19 @@ import Russia from '../../assets/images/flags/Russia.png'
 import UAE from '../../assets/images/flags/UAE.png'
 import US from '../../assets/images/flags/US.png'
 
+//===========================================================================================                                                     Product folder ===========================================================================================
+import Shirt1 from '../../assets/images/shirts/s.jpg'
+import Shirt2 from '../../assets/images/shirts/s2.jpg'
+import Shirt3 from '../../assets/images/shirts/s3.jpg'
+import Shirt4 from '../../assets/images/shirts/s4.jpg'
+import Shirt5 from '../../assets/images/shirts/s5.jpg'
+import Shirt6 from '../../assets/images/shirts/s6.jpg'
+
 export {
     profilePic, cart_bg, bannerImage, GroupBg, MaskGroup, MaskGroup2, personBg, planeBg, techBg,
     softChair, lamp, dishes, pot, mixer, blender, appliance, plant,
     CanonCameras, electricKettle, goPro, whiteHeadphone, GamingHeadphones, laptops, smartPhone, smartTablet, smartWatch, 
     Bag, BrownJacket, Coat, JeansShort, Shirt, Wallet,
-    AppStore, PlayStore, UAE, Australia, US, Russia, Italy, Denmark, France, Germany, China, Britain
+    AppStore, PlayStore, UAE, Australia, US, Russia, Italy, Denmark, France, Germany, China, Britain,
+    Shirt1, Shirt2, Shirt3, Shirt4, Shirt5, Shirt6
 }

@@ -1,42 +1,43 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Youtube, ChevronUp, ShoppingBag } from 'lucide-react';
-import { AppStore, PlayStore, US, Germany, France } from '../assets/images/index';
+import { AppStore, PlayStore, US, Germany, France } from '../../assets/images/index';
 
 const footerLinks = [
     {
         title: "About",
         links: [
-            { label: "About Us", href: "https://www.google.com" },
-            { label: "Find store", href: "https://www.google.com" },
-            { label: "Categories", href: "https://www.google.com" },
-            { label: "Blogs", href: "https://www.google.com" }
+            { label: "About Us", href: "/" },
+            { label: "Find store", href: "/" },
+            { label: "Categories", href: "/category/all" },
+            { label: "Blogs", href: "/" }
         ]
     },
     {
         title: "Partnership",
         links: [
-            { label: "About Us", href: "https://www.google.com" },
-            { label: "Find store", href: "https://www.google.com" },
-            { label: "Categories", href: "https://www.google.com" },
-            { label: "Blogs", href: "https://www.google.com" }
+            { label: "About Us", href: "/" },
+            { label: "Find store", href: "/" },
+            { label: "Categories", href: "/category/all" },
+            { label: "Blogs", href: "/" }
         ]
     },
     {
         title: "Information",
         links: [
-            { label: "Help Center", href: "https://www.google.com" },
-            { label: "Money Refund", href: "https://www.google.com" },
-            { label: "Shipping", href: "https://www.google.com" },
-            { label: "Contact us", href: "https://www.google.com" }
+            { label: "Help Center", href: "/profile" },
+            { label: "Money Refund", href: "/profile" },
+            { label: "Shipping", href: "/profile" },
+            { label: "Contact us", href: "/profile" }
         ]
     },
     {
         title: "For users",
         links: [
-            { label: "Login", href: "https://www.google.com" },
-            { label: "Register", href: "https://www.google.com" },
-            { label: "Settings", href: "https://www.google.com" },
-            { label: "My Orders", href: "https://www.google.com" }
+            { label: "Login", href: "/login" },
+            { label: "Register", href: "/login" },
+            { label: "Settings", href: "/profile" },
+            { label: "My Orders", href: "/profile" }
         ]
     }
 ];
@@ -51,7 +52,6 @@ const socialLinks = [
 
 const Footer = () => {
     const [isLangOpen, setIsLangOpen] = useState(false);
-
     const [selectedLang, setSelectedLang] = useState({ name: "English", flag: US });
 
     const languages = [
@@ -61,22 +61,20 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="w-full bg-white font-sans">
-            <div className='mx-auto max-w-[1180px] pt-10 pb-12 flex justify-between'>
+        <footer className="w-full bg-white font-sans border-t border-gray-200 mt-10">
+            <div className='mx-auto max-w-[1180px] pt-10 pb-12 flex flex-col md:flex-row flex-wrap justify-between px-4 xl:px-0 gap-8 md:gap-0'>
                 
-                <div className="max-w-[276px]">
+                <div className="max-w-full md:max-w-[276px]">
                     <div className='flex items-center gap-2 mb-4'>
                         <div className="bg-blue-500 p-2 rounded-md text-white">
                             <ShoppingBag size={24} />
                         </div>
                         <span className="font-bold text-2xl text-blue-500 tracking-wide">
-                            Brand
+                            TrendTrove
                         </span>
                     </div>
                     
-                    <p 
-                        className="text-gray-500 text-[16px] leading-relaxed mb-5"
-                    >
+                    <p className="text-gray-500 text-[16px] leading-relaxed mb-5">
                         Best information about the company goes here but now lorem ipsum is
                     </p>
                     
@@ -97,24 +95,18 @@ const Footer = () => {
 
                 {footerLinks.map((column, index) => (
                     <div key={index}>
-                        <h4 
-                            className="font-semibold text-gray-900 mb-4"
-                        >
+                        <h4 className="font-semibold text-gray-900 mb-4">
                             {column.title}
                         </h4>
-                        <ul 
-                            className="flex flex-col gap-2"
-                        >
+                        <ul className="flex flex-col gap-2">
                             {column.links.map((link, linkIndex) => (
-                                <li 
-                                    key={linkIndex}>
-                                    <a 
-                                        href={link.href}
-                                        target='_blank'
-                                        className="text-gray-500 hover:text-gray-900 text-[15px] transition-colors"
+                                <li key={linkIndex}>
+                                    <Link 
+                                        to={link.href}
+                                        className="text-gray-500 hover:text-blue-600 text-[15px] transition-colors"
                                     >
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -122,44 +114,25 @@ const Footer = () => {
                 ))}
 
                 <div>
-                    <h4 
-                        className="font-semibold text-gray-900 mb-4"
-                    >
+                    <h4 className="font-semibold text-gray-900 mb-4">
                         Get app
                     </h4>
-                    <div 
-                        className="flex flex-col gap-2"
-                    >
-                        <a 
-                            
-                            href="#" 
-                            className="hover:opacity-80 transition-opacity"
-                        >
-                            <img src={AppStore} alt="Download on the App Store" className="h-[40px] w-auto bg-black rounded-md" 
-                        />
+                    <div className="flex flex-col gap-2">
+                        <a href="#" className="hover:opacity-80 transition-opacity">
+                            <img src={AppStore} alt="App Store" className="h-[40px] w-auto bg-black rounded-md" />
                         </a>
-                        <a 
-                            href="#" 
-                            className="hover:opacity-80 transition-opacity"
-                        >
-                            <img src={PlayStore} alt="Get it on Google Play" className="h-[40px] w-auto bg-black rounded-md" 
-                        />
+                        <a href="#" className="hover:opacity-80 transition-opacity">
+                            <img src={PlayStore} alt="Google Play" className="h-[40px] w-auto bg-black rounded-md" />
                         </a>
                     </div>
                 </div>
                 
             </div>
 
-            <div
-                className="w-full bg-gray-100 border-t border-gray-200"
-            >
-                <div 
-                    className="mx-auto max-w-[1180px] py-4 flex justify-between items-center"
-                >
-                    <span 
-                        className="text-gray-500 text-[15px]"
-                    >
-                        &copy; 2026 Haris Rindh.
+            <div className="w-full bg-gray-100 border-t border-gray-200">
+                <div className="mx-auto max-w-[1180px] py-4 flex flex-col md:flex-row gap-4 md:gap-0 justify-center md:justify-between items-center px-4 xl:px-0">
+                    <span className="text-gray-500 text-[15px]">
+                        &copy; 2026 TrendTrove.
                     </span>
                 
                     <div className="relative">
@@ -167,25 +140,13 @@ const Footer = () => {
                             onClick={() => setIsLangOpen(!isLangOpen)} 
                             className="flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors"
                         >
-                            <img 
-                                src={selectedLang.flag} 
-                                alt={`${selectedLang.name} Flag`} 
-                                className="w-6 h-auto" 
-                            />
-                            <span
-                                className="text-[15px] font-medium">
-                                {selectedLang.name}
-                            </span>
-                            
-                            <ChevronUp size={18} 
-                                className={`transform transition-transform ${isLangOpen ? 'rotate-180' : ''}`} 
-                            />
+                            <img src={selectedLang.flag} alt="Flag" className="w-6 h-auto" />
+                            <span className="text-[15px] font-medium">{selectedLang.name}</span>
+                            <ChevronUp size={18} className={`transform transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
                         </button>
 
                         {isLangOpen && (
-                            <div 
-                                className="absolute bottom-full right-0 mb-3 w-36 bg-white border border-gray-200 rounded-md shadow-lg overflow-hidden flex flex-col z-10"
-                            >
+                            <div className="absolute bottom-full right-0 mb-3 w-36 bg-white border border-gray-200 rounded-md shadow-lg overflow-hidden flex flex-col z-10">
                                 {languages.map((lang, idx) => (
                                     <button
                                         key={idx}
@@ -202,7 +163,6 @@ const Footer = () => {
                             </div>
                         )}
                     </div>
-
                 </div>
             </div>
         </footer>

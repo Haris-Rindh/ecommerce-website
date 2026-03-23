@@ -1,5 +1,5 @@
 import {Search, Box, Send, Shield} from "lucide-react";
-import { MaskGroup, MaskGroup2, personBg, planeBg } from '../assets/images'
+import { MaskGroup, MaskGroup2, personBg, planeBg } from '../../assets/images';
 
 const services = [
     {
@@ -34,10 +34,10 @@ const services = [
 
 const Extra_service = () => {
     return (
-        <div className='mx-auto mt-6 mb-10 max-w-[1180px]'>
-            <h3 className='text-2xl font-semibold pb-6'>Our extra services</h3>
+        <div className='mx-auto mt-6 mb-10 max-w-[1180px] px-4 xl:px-0'>
+            <h3 className='text-xl md:text-2xl font-semibold pb-4 md:pb-6'>Our extra services</h3>
             
-            <div className="flex gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
                 {services.map((service) => (
                     <ServiceCard 
                         key={service.id}
@@ -54,8 +54,8 @@ const Extra_service = () => {
 
 function ServiceCard({Image, Alt, Description, Icon}) {
     return (
-        <div className='w-[280px] h-[200px] bg-white border border-gray-200 rounded-lg flex flex-col hover:shadow-sm transition-shadow relative group'>
-            <div className="relative h-[120px] w-full">
+        <div className='w-full h-auto md:h-[200px] bg-white border border-gray-200 rounded-lg flex flex-col hover:shadow-sm transition-shadow relative group pb-4 md:pb-0'>
+            <div className="relative h-[120px] w-full shrink-0">
                 <img
                     src={Image}
                     alt={Alt}
