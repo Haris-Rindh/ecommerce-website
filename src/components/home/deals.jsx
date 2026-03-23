@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Countdown from './countdown.jsx';
+import Countdown from './countdown';
 import { collection, getDocs, query, limit } from 'firebase/firestore';
 import { db } from '../../firebase';
 

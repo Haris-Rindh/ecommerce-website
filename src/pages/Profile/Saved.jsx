@@ -1,4 +1,3 @@
-// src/components/pages/Saved.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalState';
