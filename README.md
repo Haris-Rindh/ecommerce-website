@@ -1,235 +1,183 @@
-🌍 GlobalTrade - B2B E-Commerce Platform
+<h1>🌍 TrendTrove — B2B E-Commerce Platform</h1>
 
-📁 Project Structure
+<p>
+A scalable and modern <b>B2B e-commerce platform</b> designed to connect businesses,
+manage bulk transactions, and streamline product discovery with a clean and responsive UI.
+</p>
 
-ecommerce-platform/
+<hr/>
+
+<h2>🚀 Features</h2>
+<ul>
+  <li>🛒 Product browsing & category filtering</li>
+  <li>🔍 Advanced search functionality</li>
+  <li>👤 User authentication (Login/Register)</li>
+  <li>❤️ Wishlist & Cart management</li>
+  <li>📦 Order management system</li>
+  <li>🧑‍💼 Admin dashboard (Bulk import, control panel)</li>
+  <li>🔥 Firebase integration (Auth + Database)</li>
+  <li>🎨 Fully responsive UI with Tailwind CSS</li>
+</ul>
+
+<hr/>
+
+<h2>📁 Project Structure</h2>
+
+<pre>
+src/
 │
-├── public/
-│   └── index.html
-├── src/
-│   ├── assets/            # Images, icons, global CSS
-│   ├── components/        # Reusable UI (Header, Footer, ProductCards, Home sections)
-│   ├── context/           # Global State Management (Cart, Wishlist, User, Toast)
-│   ├── pages/             # Route Components
-│   │   ├── Admin/         # Admin Dashboard, Bulk Import
-│   │   ├── Auth/          # Login, Register
-│   │   ├── Product/       # Details, Reviews, Related Items, Description Tabs
-│   │   ├── Profile/       # User Orders, Saved Items, Messages
-│   │   ├── Cart.jsx
-│   │   ├── CategoryPage.jsx
-│   │   ├── Checkout.jsx
-│   │   └── SearchPage.jsx
-│   ├── App.jsx            # Main App component & Routing setup
-│   ├── firebase.js        # Firebase configuration & initialization
-│   └── main.jsx           # React entry point
+├── assets/                 
+│   └── index.css              
 │
-├── .env                   # Environment variables (Firebase Keys)
-├── tailwind.config.js     # Tailwind CSS styling rules
-└── package.json
-
-
-🌐 Live Deployment
-
-Environment
-
-Link
-
-Status
-
-🔥 Local Development
-
-http://localhost:5173
-
-✅ Ready
-
-🚀 Production Deploy
-
-(Coming Soon)
-
-⏳ Pending
-
-💡 Note: For live public access, deploy to Vercel or Firebase Hosting. Follow the deployment guide below!
-
-📖 Overview
-
-GlobalTrade is a complete, serverless MERN-alternative e-commerce application designed for scaling B2B & B2C global inventory. Built with modern React practices, Tailwind CSS for stunning responsiveness, and Firebase for a robust, real-time backend.
-
-Feature
-
-Description
-
-Architecture
-
-Serverless Stack (React.js, Firebase Auth, Firestore DB)
-
-Authentication
-
-Secure Email/Password login capturing complete user profiles
-
-State Management
-
-React Context API for Cart, Wishlist, and Toast notifications
-
-Styling
-
-Tailwind CSS + Mobile-First Responsive Design
-
-Product Catalog
-
-Advanced sidebar filtering (Brands, Category, Price Slider, Rating)
-
-B2B Capabilities
-
-Tiered bulk pricing, verified supplier badges, bulk JSON importing
-
-Admin Dashboard
-
-Real-time order tracking, inventory management, and data uploads
-
-🎯 Features
-
-👤 Customer Experience
-
-Feature
-
-Details
-
-🔐 Authentication
-
-Secure Login and Registration capturing Name and Phone Number.
-
-🛍️ Advanced Browsing
-
-Grid/List view toggles, dual-range price sliders, and multi-select filters.
-
-⭐ Interactive Reviews
-
-Real-time star ratings and customer comment system on product pages.
-
-🛒 Dynamic Cart
-
-Add/Remove items, dynamic total calculations with automated tax and discounts.
-
-💖 Wishlist
-
-"Save for later" functionality to bookmark products across sessions.
-
-📱 Responsive UI
-
-Mobile-first design with off-canvas filter drawers and swipeable product rows.
-
-⚙️ Technical & Admin Capabilities
-
-Capability
-
-Implementation
-
-Database
-
-Firebase Firestore NoSQL database for real-time syncing without a custom backend server.
-
-Bulk Import Tool
-
-Custom JSON parser in the Admin panel to upload massive product catalogs instantly.
-
-Order Management
-
-Admin dashboard to view customer details and update shipping status (Processing → Delivered).
-
-Routing & Security
-
-React Router DOM with protected routes preventing unauthorized checkout/admin access.
-
-🛠️ Tech Stack
-
-┌─────────────────────────────────────────────────────────────┐
-│                     FRONTEND                                │
-│  React 18 • React Router DOM • Tailwind CSS • Lucide Icons  │
-├─────────────────────────────────────────────────────────────┤
-│                     BACKEND & DATABASE                      │
-│  Firebase Firestore (NoSQL) • Serverless Architecture       │
-├─────────────────────────────────────────────────────────────┤
-│                     AUTHENTICATION                          │
-│  Firebase Auth • Protected Routes • Session Persistence     │
-├─────────────────────────────────────────────────────────────┤
-│                     STATE MANAGEMENT                        │
-│  Context API (GlobalState, ToastContext)                    │
-└─────────────────────────────────────────────────────────────┘
-
-
-📦 Quick Start Guide
-
-Prerequisites
-
-✓ Node.js v18+ installed
-✓ Firebase account with a configured Web App
-✓ Git version control
-
-Step 1: Clone Repository
-
-git clone [https://github.com/YourUsername/GlobalTrade-Ecommerce.git](https://github.com/YourUsername/GlobalTrade-Ecommerce.git)
-cd GlobalTrade-Ecommerce
-
-
-Step 2: Install Dependencies
-
+├── components/             
+│   ├── home/                   
+│   │   ├── Discount_Box.jsx
+│   │   ├── countdown.jsx
+│   │   ├── deals.jsx
+│   │   ├── extra_service.jsx
+│   │   ├── herosection.jsx
+│   │   ├── homeitems.jsx
+│   │   ├── Inquiry.jsx
+│   │   ├── recommended_items.jsx
+│   │   └── suppliers.jsx
+│   │
+│   └── layout/                
+│       ├── Header.jsx
+│       ├── Navbar.jsx
+│       ├── Footer.jsx
+│       └── Newsletter.jsx
+│
+├── context/                
+│   ├── GlobalState.jsx         
+│   └── ToastContext.jsx        
+│
+├── pages/                  
+│   ├── Admin/                  
+│   │   ├── AdminDashboard.jsx
+│   │   └── SeedData.jsx
+│   │
+│   ├── Auth/                   
+│   │   └── Login.jsx
+│   │
+│   ├── Product/                
+│   │   ├── ProductPage.jsx    
+│   │   ├── DetailsTab.jsx
+│   │   └── RelatedProducts.jsx
+│   │
+│   ├── Profile/ 
+│   │   ├── Profile.jsx
+│   │   ├── Saved.jsx
+│   │   └── Messages.jsx
+│   │
+│   ├── Cart.jsx
+│   ├── CategoryPage.jsx
+│   ├── Checkout.jsx
+│   ├── Home.jsx                
+│   ├── Placeholder.jsx
+│   └── SearchPage.jsx
+│
+├── routes/                 
+│   └── ProtectedRoute.jsx
+│
+├── App.jsx                 
+├── main.jsx                
+└── firebase.js
+</pre>
+
+<hr/>
+
+<h2>⚙️ Installation & Setup</h2>
+
+<h3>1. Clone the repository</h3>
+<pre>
+git clone https://github.com/Haris-Rindh/ecommerce-website.git
+cd ecommerce-platform
+</pre>
+
+<h3>2. Install dependencies</h3>
+<pre>
 npm install
+</pre>
 
+<h3>3. Setup environment variables</h3>
+<p>Create a <code>.env</code> file and add:</p>
 
-Step 3: Configure Environment Variables
+<pre>
+VITE_FIREBASE_API_KEY=your_key
+VITE_FIREBASE_AUTH_DOMAIN=your_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
+</pre>
 
-Create a .env file in the root directory and add your Firebase configuration keys:
+<hr/>
 
-VITE_FIREBASE_API_KEY="your_api_key_here"
-VITE_FIREBASE_AUTH_DOMAIN="your_project_id.firebaseapp.com"
-VITE_FIREBASE_PROJECT_ID="your_project_id"
-VITE_FIREBASE_STORAGE_BUCKET="your_project_id.appspot.com"
-VITE_FIREBASE_MESSAGING_SENDER_ID="1234567890"
-VITE_FIREBASE_APP_ID="1:1234567890:web:abc123def456"
+<h2>🧪 Run Locally</h2>
 
-
-Step 4: Run Application
-
+<pre>
 npm run dev
+</pre>
 
+<p>App will be available at:</p>
+<p><b>https://trendtrove-pi.vercel.app/</b></p>
 
-Step 5: Access Application
+<hr/>
 
-Frontend Client: http://localhost:5173 (or port provided by Vite)
+<h2>🌐 Deployment</h2>
 
-Admin Dashboard: Register an account using your designated Admin Email to unlock the /admin route. (Change the ADMIN_EMAIL constant in Header.jsx and App.jsx to match your email).
+<table>
+  <tr>
+    <th>Environment</th>
+    <th>Link</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>🔥 Local Development</td>
+    <td>http://localhost:5173</td>
+    <td>✅ Ready</td>
+  </tr>
+  <tr>
+    <td>🚀 Production</td>
+    <td>—</td>
+    <td>⏳ Pending</td>
+  </tr>
+</table>
 
-🧪 Testing Checklist
+<hr/>
 
-[x] User Registration & Authentication Flow
+<h2>🛠️ Tech Stack</h2>
+<ul>
+  <li><b>Frontend:</b> React.js (Vite)</li>
+  <li><b>Styling:</b> Tailwind CSS</li>
+  <li><b>State Management:</b> React Context API</li>
+  <li><b>Backend / DB:</b> Firebase</li>
+  <li><b>Routing:</b> React Router</li>
+</ul>
 
-[x] Responsive Mobile Navigation & Hamburger Menu
+<hr/>
 
-[x] Product Browsing & Off-Canvas Mobile Filtering
+<h2>📌 Future Improvements</h2>
+<ul>
+  <li>💳 Payment gateway integration</li>
+  <li>📊 Advanced analytics dashboard</li>
+  <li>🌍 Multi-language support</li>
+  <li>📱 Mobile app version</li>
+  <li>🔐 Role-based access control</li>
+</ul>
 
-[x] Add to Cart & Dynamic Math Engine (Tax/Discounts)
+<hr/>
 
-[x] Wishlist "Save for later" Functionality
+<h2>🤝 Contributing</h2>
+<ol>
+  <li>Fork the repository</li>
+  <li>Create a new branch</li>
+  <li>Make your changes</li>
+  <li>Submit a pull request</li>
+</ol>
 
-[x] Live Product Reviews Submission
+<hr/>
 
-[x] Checkout Process & Order Creation in Firestore
-
-[x] Admin Dashboard Access & Order Status Updating
-
-[x] Admin Bulk JSON Product Import
-
-🚀 Future Roadmap
-
-[ ] Stripe Payment Gateway Integration
-
-[ ] Automated Order Confirmation Emails
-
-[ ] User Profile Avatar Uploads via Firebase Storage
-
-[ ] Multi-Language Support Translation Toggle
-
-[ ] Dark Mode UI Theme
-
-Open a Pull Request to contribute!
-👨‍💻 Developed By Haris Rindh
+<h2>📄 License</h2>
+<p>This project is licensed under the <b>MIT License</b>.</p>
